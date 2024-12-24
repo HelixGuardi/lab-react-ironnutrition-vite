@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <h1>LAB | React IronNutrition</h1>
-      <FoodBox foods={foods}/>
+      <FoodBox foods={foods} setFoods={setFoods}/>
     </div>
   );
 }

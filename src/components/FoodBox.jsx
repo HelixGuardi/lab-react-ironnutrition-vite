@@ -1,7 +1,12 @@
 function FoodBox(props) {
   // console.log(props);
-  const { foods } = props;
-  console.log(foods);
+  const { foods, setFoods } = props;
+//   console.log(foods);
+
+    const handleDelete = (idToDelete) => {
+        const stateClone = foods.filter((eachFood) => eachFood.id !== idToDelete);
+        setFoods(stateClone);
+    }
 
   return (
     <>
@@ -19,7 +24,7 @@ function FoodBox(props) {
               <b>Total Calories: {eachFood.servings * eachFood.calories} </b> kcal
             </p>
 
-            <button>Delete</button>
+            <button onClick={() => handleDelete(eachFood.id)}>Delete</button>
           </div>
         );
       })}

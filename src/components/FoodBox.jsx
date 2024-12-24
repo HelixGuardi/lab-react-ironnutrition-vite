@@ -7,7 +7,7 @@ function FoodBox(props) {
     <>
       {foods.map((eachFood) => {
         return (
-          <div>
+          <div key={eachFood.id}>
             <p>{eachFood.name}</p>
 
             <img src={eachFood.image} />
@@ -28,3 +28,6 @@ function FoodBox(props) {
 }
 
 export default FoodBox;
+
+//al final no hice el test, y me confundí con el commit. La iteración 2 y 3 iban emarcadas
+//juntas en el commit, ya que me salté la parte del "test"
